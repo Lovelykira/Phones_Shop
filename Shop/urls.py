@@ -20,5 +20,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^all_o/', include('app.urls')),
+    url(r'^', include("app.urls")),
     # url(r'^all_o/(?P<o_id>\d+)/$', IdOrder),
 ]

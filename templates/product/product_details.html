@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Product details:</h2>
+    <p>Name:{{ product.name }} <br>
+       Price: {{ product.price }} <br>
+       Available in stock: {{ product.in_stock }}
+    </p>
+
+    <p>
+        Model details:<br>
+        Model name: {{ product.p_model.name }}  <br>
+        Manufacturer:{{ product.p_model.Manufacturer }}  <br>
+        OS:{{ product.p_model.OS }}  <br>
+        Number of cores:{{ product.p_model.core_num }}  <br>
+        Number of SIM-cards can be used:{{ product.p_model.sim_card_num }}  <br>
+        Number of camera megapoxels: {{ product.p_model.megapixels_num }}  <br>
+    </p>
+
+    <form action="" method="get">
+        <button type="submit" class="btn btn-primary btn-sm" formaction="{{ product.get_absolute_url }}update/">Edit product</button>
+        <button type="submit" class="btn btn-primary btn-sm" formaction="/">Main page</button>
+    </form>
+{% endblock %}

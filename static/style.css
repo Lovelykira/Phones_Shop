@@ -1,0 +1,43 @@
+body{
+    font-family: Georgia, serif;
+    font-size:16px;
+}
+
+select{
+    background: transparent;
+    padding: 3px;
+    margin: 1px;
+    font-size: 14px;
+}
+
+button{
+    display:inline-block;
+}
+
+form {
+    display: inline-block;
+}
+
+.product_name{
+    font-size:16px;
+}
+
+.product_name_container{
+    padding:5px 0;
+}
+
+.drop_filters_container{
+    padding: 12px 0 0 12px;
+}
+
+.update_name,
+.update_price,
+.update_in_stock,
+.update_model{
+    width:130%;
+}
+
+#create_button{
+    margin: 4px;
+}
+

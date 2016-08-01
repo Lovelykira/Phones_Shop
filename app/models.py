@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 
 class Client(models.Model):
@@ -33,12 +34,21 @@ class PhoneModel(models.Model):
     sim_card_num = models.IntegerField()
     megapixels_num = models.FloatField()
 
+    def get_absolute_url(self):
+        return reverse('product_details', kwargs={'pk': self.pk})
+
+    def __str__(self):
+        return '{}, OS: {}, Sim cards: {}'.format(self.name, self.OS, self.sim_card_num)
+
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    p_model = models.ForeignKey(PhoneModel)
+    p_model = models.ForeignKey(PhoneModel, verbose_name="Model info")
     price = models.FloatField()
     in_stock = models.IntegerField()
+
+    def get_absolute_url(self):
+        return reverse('product_details', kwargs={'pk': self.pk})
 
 
 class Order(models.Model):
