@@ -2,7 +2,7 @@
 {% block content %}
 <div class="row">
     <div class="col-md-12">
-        <h2>Orders Database</h2>
+        <h2>Products Database</h2>
         {% include 'product/search.html' %}
         {% include 'product/sort.html' %}
         <div class="drop_filters_container">
@@ -16,7 +16,7 @@
 </div>
 <div class="row">
 <div class="col-md-12">
-            <h3>Orders:</h3>
+            <h3>Products:</h3>
             {% for product in product_list %}
                 <div class="row">
                     <div class="col-md-1" style="width: 10%">
