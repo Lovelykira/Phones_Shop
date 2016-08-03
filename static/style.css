@@ -1,7 +1,16 @@
 body{
     font-family: Georgia, serif;
     font-size:16px;
+    padding-bottom: 80px;
 }
+
+.container{
+margin-top: 0;
+padding: 0;
+#background:red;
+width: 1000px;
+}
+
 
 select{
     background: transparent;
@@ -16,6 +25,32 @@ button{
 
 form {
     display: inline-block;
+    #width:10px;
+}
+
+h3,
+a{
+display: inline-block;
+vertical-align: middle;
+}
+
+.pages {
+vertical-align: 25px ;
+text-align:center;
+#background:red;
+font-size: 20px;
+}
+
+.nex_page,
+.prev_page{
+vertical-align: 0.5px;
+}
+
+.form-group
+{
+#background:red;
+padding:15px 0 0 15px;
+vertical-align: middle;
 }
 
 .product_name{
@@ -26,15 +61,69 @@ form {
     padding:5px 0;
 }
 
-.drop_filters_container{
-    padding: 12px 0 0 12px;
-}
-
 .update_name,
 .update_price,
 .update_in_stock,
 .update_model{
     width:130%;
+}
+
+.row_bg *{
+#background:red;
+}
+
+.search{
+#padding: 0 0 0 0;
+display: inline-block;
+#background: blue;
+#width:50%
+}
+
+.search_input,
+.search_button{
+vertical-align: middle;
+}
+
+.sort {
+width: 430px;
+#background:blue;
+margin: 0 0 0 470px;
+#position: absolute;
+#right: 50px;
+display: inline-block;
+#z-index:-111;
+}
+
+.sort * {
+display:inline-block;
+height: 30px;
+margin:auto;
+}
+
+.btn-xs,
+.btn-sm{
+padding: 4px 10px;
+border-radius: 8px;
+font-size: 14px;
+}
+
+.btn-sm{
+padding: 5px 10px;
+}
+
+.col-md-6 * {
+vertical-align: middle;
+}
+
+.footer,
+.header{
+  width: 100%;
+  height: 52px;
+}
+
+
+padding: 10px 0 0 0;
+#margin: 100px;
 }
 
 #create_button{

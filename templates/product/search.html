@@ -1,7 +1,9 @@
 {% extends "base.html" %}
+{%block head%}
+{%endblock%}
 {% block content %}
-    <form action="" method="get" accept-charset="utf-8">
-        <input name="q" type="text" placeholder="Search">
-        <button type="submit" class="btn btn-primary btn-xs">Search</button>
+    <form action="/" method="get" accept-charset="utf-8" class="navbar-form navbar-right">
+        <input name="q" type="text" placeholder="Search" class="search_input">
+        <button type="submit" class="btn btn-primary btn-xs search_button">Search</button>
     </form>
 {% endblock %}
