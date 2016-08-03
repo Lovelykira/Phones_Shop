@@ -7,12 +7,18 @@ class Client(models.Model):
     surname = models.CharField(max_length=100)
     phone_num = models.CharField(max_length=20)
 
+    def __str__(self):
+        return '{} {}'.format(self.name, self.surname)
+
 
 class Manufacturer(models.Model):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=200)
     phone_num = models.CharField(max_length=20)
     site = models.CharField(max_length=300)
+
+    def __str__(self):
+        return '{}'.format(self.name)
 
 
 class PhoneModel(models.Model):
@@ -50,11 +56,17 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('product_details', kwargs={'pk': self.pk})
 
+    def __str__(self):
+        return '{}'.format(self.name)
+
 
 class Order(models.Model):
     client_id = models.ForeignKey(Client)
     date = models.DateTimeField(auto_now_add=True)
     products = models.ManyToManyField(Product, through='OrderItem')
+
+    def __str__(self):
+        return '{} {} : {}'.format(self.client_id.name, self.client_id.surname, self.products)
 
 
 class OrderItem(models.Model):
@@ -65,3 +77,7 @@ class OrderItem(models.Model):
     def _get_total(self):
         return self.product.price * self.quantity
     total_cost = property(_get_total)
+
+    def __str__(self):
+        return 'Order #{}, product: {} quantity: {}'.format(self.order.id, self.product.name, self.quantity)
+
