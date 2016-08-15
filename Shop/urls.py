@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-# from app.views import AllOrders, IdOrder
+from app.views import change_lang
 
 urlpatterns = [
     url(r'^', include("app.urls")),
     url(r'^admin/', admin.site.urls),
-    url(r'^all_o/', include('app.urls')),
+    url(r'^lang/(?P<lang>\w{2})/', change_lang),
     # url(r'^all_o/(?P<o_id>\d+)/$', IdOrder),
 ]

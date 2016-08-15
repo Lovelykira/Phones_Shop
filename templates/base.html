@@ -12,7 +12,9 @@
         <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand bg-info" href="/">Products Database</a>
+
             </div>
+
             <div class="search">{% include 'product/search.html' %}</div>
         </div>
     </nav>
@@ -27,8 +29,17 @@
 <div class="navbar navbar-inverse navbar-fixed-bottom footer" role="navigation">
     <div class="container">
         <div class="navbar-text pull-left">
-            © Natalia Bloshchiskaya
+            <a href="/lang/en/">English</a>
+            <a href="/lang/ru/">Русский</a>
+            {% load i18n %}
+            {% get_current_language as LANGUAGE_CODE %}
+            {% blocktrans %} Current language: {% endblocktrans %}{{ LANGUAGE_CODE }}
+
         </div>
+        <div class="navbar-text pull-right">
+        ©{% blocktrans%} Natalia Bloshchiskaya {% endblocktrans %}
+        </div>
+
     </div>
 </div>
 </body>

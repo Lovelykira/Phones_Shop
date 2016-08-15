@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from django.contrib import admin
-from app.views import ProductListView, ProductDetailView, ProductUpdateView, ProductCreateView, ProductDeleteView
+from app.views import ProductListView, ProductDetailView, ProductUpdateView, ProductCreateView, ProductDeleteView,OrderView
 
 urlpatterns = [
     #url(r'^(?P<o_id>\d+)/$', IdOrder),
@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^(?P<pk>\d+)/update/$', view=ProductUpdateView.as_view()),
     url(r'^create/$', view=ProductCreateView.as_view()),
     url(r'^(?P<pk>\d+)/delete/$', view=ProductDeleteView.as_view()),
+    url(r'^(?P<pk>\d+)/order/$', view=OrderView.as_view()),
 ]

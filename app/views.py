@@ -4,12 +4,13 @@ from django.http import HttpResponse, Http404, JsonResponse, HttpResponseRedirec
 from app.models import *
 from django.views.decorators.http import require_GET
 from django.core import serializers
-from django.views.generic import DetailView
+from django.views.generic import DetailView, TemplateView
 from django.views.generic.list import ListView
 from django.views.generic.edit import UpdateView, CreateView, DeleteView
 from .models import Order, Client
 from django.db.models import Q
 from django.shortcuts import redirect
+from django.conf import settings
 
 from app.forms import ProductForm
 
@@ -63,3 +64,13 @@ class ProductDeleteView(DeleteView):
 
     def get_success_url(self, **kwargs):
         return reverse_lazy('product_list')
+
+
+class OrderView(TemplateView):
+    template_name = 'order.html'
+
+
+def change_lang(request, lang):
+    if lang:
+        settings.LANGUAGE_CODE = lang
+    return redirect('/')

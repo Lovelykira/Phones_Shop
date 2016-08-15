@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-15 16:01+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: app/models.py:48
+msgid "{}, OS: {}, Sim cards: {}"
+msgstr "{}, OC: {}, СИМ-карты: {}"
+
+#: app/models.py:52 templates/product/product_list.html:12
+#: templates/product/sort.html:10
+msgid "Name"
+msgstr "Имя"
+
+#: app/models.py:53
+msgid "Model info"
+msgstr "Модель"
+
+#: app/models.py:54 templates/product/product_list.html:13
+#: templates/product/product_list.html:37 templates/product/sort.html:11
+msgid "Price"
+msgstr "Цена"
+
+#: app/models.py:55
+msgid "In stock"
+msgstr "На складе"
+
+#: templates/base.html:36
+msgid " Current language: "
+msgstr "Текущий язык: "
+
+#: templates/base.html:40
+msgid " Natalia Bloshchiskaya "
+msgstr "Наталия Блощинская"
+
+#: templates/product/product_create.html:4
+msgid "Create new product:"
+msgstr "Создать новый товар:"
+
+#: templates/product/product_create.html:8
+msgid "Create"
+msgstr "Создать"
+
+#: templates/product/product_details.html:4
+msgid "Product details:"
+msgstr "Информация о товаре:"
+
+#: templates/product/product_details.html:5
+msgid "Name:"
+msgstr "Имя:"
+
+#: templates/product/product_details.html:6
+msgid "Price:"
+msgstr "Цена:"
+
+#: templates/product/product_details.html:7
+msgid "Available in stock:"
+msgstr "Доступно на складе:"
+
+#: templates/product/product_details.html:11
+msgid "Model details:"
+msgstr "Детали о модели:"
+
+#: templates/product/product_details.html:12
+msgid "Model name:"
+msgstr "Имя модели:"
+
+#: templates/product/product_details.html:13
+msgid "Manufacturer:"
+msgstr "Производитель:"
+
+#: templates/product/product_details.html:14
+msgid "OS:"
+msgstr "ОС:"
+
+#: templates/product/product_details.html:15
+msgid "Number of cores:"
+msgstr "Количество ядер:"
+
+#: templates/product/product_details.html:16
+msgid "Number of SIM-cards can be used:"
+msgstr "Количество СИМ-карт:"
+
+#: templates/product/product_details.html:17
+msgid "Number of camera megapoxels:"
+msgstr "Количество мегапикселей камеры:"
+
+#: templates/product/product_details.html:20
+msgid "Edit product"
+msgstr "Ретактировать товар"
+
+#: templates/product/product_details.html:21
+msgid "Main page"
+msgstr "Главная страница"
+
+#: templates/product/product_list.html:7
+msgid "Products:"
+msgstr "Товары:"
+
+#: templates/product/product_list.html:17 templates/product/sort.html:15
+msgid "in ascending order"
+msgstr "по возрастанию"
+
+#: templates/product/product_list.html:18 templates/product/sort.html:16
+msgid "in decreasing order"
+msgstr "по убыванию"
+
+#: templates/product/product_list.html:20 templates/product/sort.html:18
+msgid "Sort"
+msgstr "Сортировать"
+
+#: templates/product/product_list.html:31
+msgid "Edit"
+msgstr "Изменить"
+
+#: templates/product/product_list.html:34
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/product/product_list.html:43
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: templates/product/product_list.html:45
+msgid "previous"
+msgstr "предыдущая"
+
+#: templates/product/product_list.html:49
+msgid "next"
+msgstr "следующая"
+
+#: templates/product/product_list.html:55
+msgid "New Product"
+msgstr "Новый товар"
+
+#: templates/product/product_update.html:8
+msgid "Update"
+msgstr "Изменить"
+
+#: templates/product/product_update.html:9
+msgid "Cancel"
+msgstr "Отменить"
+
+#: templates/product/search.html:7 templates/product/search.html:8
+msgid "Search"
+msgstr "Поиск"
+
+#: templates/product/sort.html:7
+msgid "Drop filters"
+msgstr "Сбросить фильтры"
+
+#: templates/product/sort.html:12
+msgid "Number in stock"
+msgstr "Количество"

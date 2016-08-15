@@ -1,19 +1,20 @@
 
 {% extends "base.html" %}
+{% load i18n %}
 {%block head%}
 {%endblock%}
 {% block content %}
-    <a href="/" class="btn btn-default btn-sm">Drop filters</a>
+    <a href="/" class="btn btn-default btn-sm">{% trans "Drop filters" %}</a>
     <form action="" method="get" accept-charset="utf-8">
     <select name="by">
-        <option>Name</option>
-        <option>Price</option>
-        <option value="in_stock">Number in stock</option>
+        <option>{% trans "Name" %}</option>
+        <option>{% trans "Price" %}</option>
+        <option value="in_stock">{% trans "Number in stock" %}</option>
     </select>
     <select name="in">
-        <option value="">in ascending order</option>
-        <option value="-">in decreasing order</option>
+        <option value="">{% trans "in ascending order" %}</option>
+        <option value="-">{% trans "in decreasing order" %}</option>
     </select>
-        <button type="submit" class="btn btn-primary btn-xs">Sort</button>
+        <button type="submit" class="btn btn-primary btn-xs">{% trans "Sort" %}</button>
     </form>
 {% endblock %}

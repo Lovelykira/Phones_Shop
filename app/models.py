@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
 
 
 class Client(models.Model):
@@ -44,14 +45,14 @@ class PhoneModel(models.Model):
         return reverse('product_details', kwargs={'pk': self.pk})
 
     def __str__(self):
-        return '{}, OS: {}, Sim cards: {}'.format(self.name, self.OS, self.sim_card_num)
+        return _('{}, OS: {}, Sim cards: {}').format(self.name, self.OS, self.sim_card_num)
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=200)
-    p_model = models.ForeignKey(PhoneModel, verbose_name="Model info")
-    price = models.FloatField()
-    in_stock = models.IntegerField()
+    name = models.CharField(max_length=200, verbose_name=_("Name"))
+    p_model = models.ForeignKey(PhoneModel, verbose_name=_("Model info"))
+    price = models.FloatField(verbose_name=_("Price"))
+    in_stock = models.IntegerField(verbose_name=_("In stock"))
 
     def get_absolute_url(self):
         return reverse('product_details', kwargs={'pk': self.pk})

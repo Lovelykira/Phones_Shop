@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load i18n %}
 {%block head%}
 {%endblock%}
 {% block content %}
     <form action="/" method="get" accept-charset="utf-8" class="navbar-form navbar-right">
-        <input name="q" type="text" placeholder="Search" class="search_input">
-        <button type="submit" class="btn btn-primary btn-xs search_button">Search</button>
+        <input name="q" type="text" placeholder=" {% trans 'Search' %}" class="search_input">
+        <button type="submit" class="btn btn-primary btn-xs search_button"> {% trans "Search" %}</button>
     </form>
 {% endblock %}

@@ -1,21 +1,23 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 <div class="row">
     <div class="col-md-12">
-        <h3>Products:</h3>
+        {% load i18n %}
+        <h3>{% trans "Products:" %}</h3>
         <div class="sort">
             <a href="/" class="btn btn-default btn-xs">Drop filters</a>
             <form action="" method="get" accept-charset="utf-8">
             <select name="by">
-                <option>Name</option>
-                <option>Price</option>
+                <option>{% trans "Name" %}</option>
+                <option>{% trans "Price" %}</option>
                 <option value="in_stock">Number in stock</option>
             </select>
             <select name="in">
-                <option value="">in ascending order</option>
-                <option value="-">in decreasing order</option>
+                <option value="">{% trans "in ascending order" %}</option>
+                <option value="-">{% trans "in decreasing order" %}</option>
             </select>
-                <button type="submit" class="btn btn-primary btn-xs">Sort</button>
+                <button type="submit" class="btn btn-primary btn-xs"> {%  trans "Sort" %}</button>
             </form>
         </div>
     </div>
@@ -26,31 +28,31 @@
             <nav class="navbar navbar-default">
                 <div class="form-group">
                     <a href="{{ product.get_absolute_url }}update/" class="btn btn-default btn-sm edit_button">
-                        Edit</a>
+                        {% trans "Edit" %}</a>
                     <form action="" method="post">
                         <button type="submit" class="btn btn-default btn-sm" formaction="{{ product.get_absolute_url }}delete/">
-                            {% csrf_token %}Delete
+                            {% csrf_token %} {% trans "Delete" %}
                         </button>
                     </form>
-                    <a href="{{product.get_absolute_url}}" class="product_name">{{ product.name }} </a>
+                    <a href="{{product.get_absolute_url}}" class="product_name">{{ product.name }} {% trans "Price" %} {{product.price}} </a>
                 </div>
             </nav>
             {% endfor %}
 
             <div class="pages">
-                    Pages:
+                   {% trans "Pages:" %}
                     {% if page_obj.has_previous %}
-                        <a href="?page={{ page_obj.previous_page_number }}" class="prev_page">previous</a>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="prev_page"> {% trans "previous" %}</a>
                     {% endif %}
                     {{ page_obj.number }}
                     {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}" class="nex_page">next</a>
+                        <a href="?page={{ page_obj.next_page_number }}" class="nex_page">{% trans "next" %}</a>
                     {% endif %}
             </div>
             <div class="row" id="create_button">
                 <br>
                 <form action="" method="get">
-                    <button type="submit" class="btn btn-primary" formaction="create/">New Product</button>
+                    <button type="submit" class="btn btn-primary" formaction="create/">{% trans "New Product" %}</button>
                 </form>
             </div>
     </div>
